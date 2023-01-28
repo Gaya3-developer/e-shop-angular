@@ -1,0 +1,30 @@
+
+
+<section class="_pdt_type_section rounded-category">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <ngx-slick-carousel class="carousel _pdt_type_slider no-arrow" 
+            #slickModal="slick-carousel" 
+            [config]="slideConfig" >
+            <div ngxSlickItem *ngFor="let slide of slides">
+                <div class="_pdt_type_section_wrapper">
+                    <div class="_pdt_img_wrapper">
+                      <a href="#">
+                        <img src="{{slide.img}}" alt="category  " class="img-fluid">
+                      </a>
+                    </div>
+                    <a href="#" class="btn-rounded">
+                     {{slide.title}}
+                    </a>
+                  </div>
+                
+            </div>
+            </ngx-slick-carousel>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--rounded category end-->
+  

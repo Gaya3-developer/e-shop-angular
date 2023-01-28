@@ -1,0 +1,317 @@
+._discount_banner {
+  background-color: white;
+  padding-top: 47px;
+  padding-bottom: 47px;
+}
+._discount_banner_wrapper {
+  text-align: center;
+}
+._discount_banner_wrapper h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+  margin-top: -5px;
+}
+._discount_banner_wrapper h1 {
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+._discount_banner_wrapper h1 span {
+  color: #00baf2;
+}
+._discount_banner_wrapper h1 span + span {
+  color: #1c3481;
+  font-weight: 700;
+}
+._discount_banner_wrapper ._discount_banner_round {
+  border-radius: 50px;
+  padding: 5px;
+  border: 2px dashed #00baf2;
+}
+._discount_banner_wrapper ._discount_banner_round ._discount_banner_sub_round {
+  background-color: #1c3481;
+  color: white;
+  text-transform: uppercase;
+  padding: 18px 0;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  border-radius: 50px;
+}
+
+._advertise_banner {
+  padding-bottom: 15px;
+}
+._advertise_banner_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+._advertise_banner_wrapper ._advertise_img {
+  width: 100%;
+  height: 300px;
+  transition: all 0.5s ease;
+  background-image: url("../../../assets/images/collection-banner/7.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: block;
+}
+._advertise_banner_wrapper ._advertise_banner_content {
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  padding: 0;
+}
+._advertise_banner_wrapper ._advertise_banner_content h3 {
+  line-height: 1;
+  color: #777;
+  text-transform: capitalize;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+._advertise_banner_wrapper ._advertise_banner_content h4 {
+  line-height: 1;
+  color: #00baf2;
+  font-weight: 700;
+  font-size: 72px;
+  text-transform: capitalize;
+}
+._advertise_banner_wrapper ._advertise_banner_content h4 span {
+  color: #1c3481;
+  font-weight: 500;
+}
+._advertise_banner_wrapper ._advertise_banner_content ._advertise_banner_btn {
+  margin-top: 13px;
+}
+._advertise_banner_wrapper ._advertise_banner_content ._advertise_banner_btn .btn-normal {
+  display: inline-block;
+}
+._advertise_banner_wrapper ._advertise_banner_content ._advertise_banner_btn a {
+  text-transform: capitalize;
+  color: #1c3481;
+  font-weight: 700;
+}
+._advertise_banner_wrapper::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+._advertise_banner_wrapper:hover ._advertise_img {
+  transform: scale(1.1);
+}
+._advertise_banner_wrapper:hover:after {
+  -webkit-animation: collection 1s;
+  animation: collection 1s;
+}
+
+._deal_banner {
+  background-color: #00baf2;
+  padding: 40px 0;
+}
+._deal_banner_wrapper {
+  height: 100%;
+}
+._deal_banner_wrapper h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: -4px;
+  margin-bottom: 5px;
+}
+._deal_banner_wrapper h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+._deal_banner_wrapper ._deal_banner_btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1679px) {
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 235px;
+  }
+}
+@media (max-width: 1470px) {
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 240px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content {
+    padding: 30px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h3 {
+    font-size: 30px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h4 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1366px) {
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 200px;
+  }
+}
+@media (max-width: 1200px) {
+  ._discount_banner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 170px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content {
+    padding: 25px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h3 {
+    font-size: 20px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h4 {
+    font-size: 40px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content .btn-normal {
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 991px) {
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 150px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content {
+    padding: 20px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h4 {
+    font-size: 32px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content ._advertise_banner_btn {
+    margin-top: 10px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content .btn-normal {
+    padding: 8px 25px;
+  }
+  ._deal_banner {
+    padding: 30px 0;
+  }
+  ._deal_banner_wrapper {
+    text-align: center;
+    height: auto;
+  }
+  ._deal_banner_wrapper h2 {
+    margin-bottom: 15px;
+  }
+  ._deal_banner_wrapper h1 {
+    margin-bottom: 17px;
+  }
+  ._deal_banner_wrapper ._deal_banner_btn {
+    justify-content: center;
+  }
+  ._deal_banner_wrapper .btn-white {
+    padding: 12px 40px;
+  }
+}
+@media (max-width: 767px) {
+  ._discount_banner {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  ._discount_banner_wrapper h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  ._discount_banner_wrapper h1 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  ._discount_banner_wrapper ._discount_banner_round ._discount_banner_sub_round {
+    line-height: 1.4;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 200px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content {
+    padding: 15px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h3 {
+    font-size: 14px;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 575px) {
+  ._discount_banner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 190px;
+  }
+  ._deal_banner_wrapper h2 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  ._deal_banner_wrapper h1 {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  ._discount_banner_wrapper h2 {
+    margin-bottom: 7px;
+  }
+  ._discount_banner_wrapper ._discount_banner_round ._discount_banner_sub_round {
+    padding: 15px 20px;
+  }
+  ._advertise_banner_wrapper ._advertise_img {
+    height: 150px;
+    background-position: right !important;
+  }
+  ._advertise_banner_wrapper ._advertise_banner_content {
+    justify-content: left;
+    padding: 20px;
+  }
+}
+@media (max-width: 360px) {
+  ._advertise_banner_wrapper ._advertise_banner_content ._advertise_sub_content {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+  }
+}
+@media (max-width: 320px) {
+  ._deal_banner_wrapper h1 {
+    line-height: 1.4;
+  }
+}/*# sourceMappingURL=discount.component.css.map */

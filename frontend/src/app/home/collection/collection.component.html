@@ -1,0 +1,27 @@
+  <!--collection banner start-->
+  <section class="_category_banner section-pt-space b-g-white ">
+    <div class="custom-container">
+      <div class="row _category">
+        <div class="col-md-4" *ngFor="let collection of collections">
+          <div class="_category_banner_wrapper">
+            <div class="_category_img">
+              <img src="{{collection.img}}" class="img-fluid bg-img  " alt="banner">
+            </div>
+            <div class="_category_content justify-content-end">
+              <div>
+                <h3>{{collection.category}}</h3>
+                <h4>{{collection.title}}</h4>
+                <div class="shop">
+                  <a href="#">
+                    shop now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </section>
+  <!--collection banner end-->

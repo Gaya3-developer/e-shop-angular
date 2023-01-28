@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "eshop-2abdf"
+  },
+  "targets": {
+    "eshop-2abdf": {
+      "hosting": {
+        "eshop": [
+          "eshop-2abdf"
+        ]
+      }
+    }
+  }
+}

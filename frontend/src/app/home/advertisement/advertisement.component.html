@@ -1,0 +1,29 @@
+<!--category banner start-->
+
+<section class="_category_banner">
+    <div class="container-fluid">
+      <div class="row _category">
+      
+        <div class="col-md-4" *ngFor="let collection of collections">
+          <div class="_category_banner_wrapper">
+            <div class="_category_img">
+              <img src="{{collection.img}}" class="img-fluid bg-img  " alt="banner">
+            </div>
+            <div class="_category_content ">
+              <div>
+                <h3>{{collection.category}}</h3>
+                <h4>{{collection.title}}</h4>
+                <button type="button">
+                  <a href="#">
+                    shop now
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--category banner end-->
+  

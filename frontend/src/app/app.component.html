@@ -1,0 +1,56 @@
+<!-- <app-header></app-header>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 py-4">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-md-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-footer></app-footer> -->
+<!-- loader start -->
+<!-- <div class="loader-wrapper" *ngIf="isDisplayed">
+  <div>
+    <img src="../assets/images/loader.gif" alt="loader">
+  </div>
+</div>
+
+<app-header></app-header>
+<section *ngIf="checkUrl()">
+ 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 py-4">
+          <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+
+
+</section>
+<section *ngIf="!checkUrl()">
+  <router-outlet></router-outlet>
+</section>
+<app-footer></app-footer> -->
+
+
+<div class="loader-wrapper" *ngIf="isDisplayed">
+  <div>
+    <img src="../assets/images/loader.gif" alt="loader">
+  </div>
+</div>
+
+<app-header></app-header>
+<section>
+  <router-outlet></router-outlet>
+</section>
+<app-footer></app-footer> 

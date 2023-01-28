@@ -1,0 +1,37 @@
+
+<!--slider start-->
+
+
+<section class="_home_page_banner  b-g-white" id="home-slide">
+    <div class="custom-container">
+      <div class="row">
+        <div class="col">
+          <ngx-slick-carousel class="carousel slide-1 no-arrow" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" >
+<div ngxSlickItem *ngFor="let slide of slides">
+  <div class="_home_page_banner_slider">
+    <div class="_slider_img">
+      <ul class="_banner_layout_slide_1">
+        <li id="img-1" class="_home_page_slide_center"><img src="{{ slide.img1 }}" class="img-fluid" alt="slider"></li>
+        <li id="img-2" class="_home_page_slide_center"><img src="{{ slide.img2 }}" class="img-fluid" alt="slider"></li>
+      </ul>
+    </div>
+    <div class="_home_page_banner_slider_content">
+      <div>
+        <h1>{{ slide.title }}<span>{{ slide.category }}</span></h1>
+        <h4>{{ slide.feature }}</h4>
+        <h2>{{ slide.description }}</h2>
+        <a href="#" class="btn btn-normal">
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--slider end-->

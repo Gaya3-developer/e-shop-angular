@@ -1,0 +1,28 @@
+$font-1:'PT Sans', sans-serif;
+$theme-color1:#00baf2;
+$theme-color2:#1c3481;
+$theme-color3:#33b54c;
+$grey:#777;
+$footer-text:#b9babc;
+$black: #000000;
+$black-1:#444444;
+$white: #ffffffff;
+$light-border:#dddddd;
+$background-1:#f2f8f9;
+$rating:#ffa800;
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+  }

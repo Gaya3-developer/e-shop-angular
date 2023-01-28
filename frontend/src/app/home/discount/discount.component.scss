@@ -1,0 +1,429 @@
+@import '../../../assets/scss/config.scss';
+._discount_banner {
+    background-color: $white;
+    padding-top: 47px;
+    padding-bottom: 47px;
+    &_wrapper{
+        text-align: center;
+        h2 {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 3px;
+            margin-top: -5px;
+          }
+          h1 {
+            font-size: 32px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          
+            span {
+                color: var(--theme-color-1);
+                & + span {
+                    color: var(--theme-color-2);
+                    font-weight: 700;
+                  }
+              }
+           
+          }
+          ._discount_banner_round {
+            border-radius: 50px;
+            padding: 5px;
+            border: 2px dashed var(--theme-color-1);
+            ._discount_banner_sub_round{
+                background-color: var(--theme-color-2);
+                color: $white;
+                text-transform: uppercase;
+                padding: 18px 0;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 0.08em;
+                line-height: 1;
+                border-radius: 50px;
+            }
+          }
+    }
+  }
+
+
+  ._advertise_banner{
+    padding-bottom: 15px;
+    &_wrapper{
+        position: relative;
+        overflow: hidden;
+        ._advertise_img {
+            width: 100%;
+            height: 300px;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            background-image: url('../../../assets/images/collection-banner/7.jpg');
+            background-size: cover;
+            background-position: center center;
+            display: block;
+          }
+          ._advertise_banner_content {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            text-align: center;
+            padding: 0;
+            h3 { 
+                line-height: 1;
+                color: $grey;
+                text-transform: capitalize;
+                font-size: 36px;
+                font-weight: 400;
+                margin-bottom: 0;
+              }
+              h4 {
+              
+                line-height: 1;
+                color: var(--theme-color-1);
+                font-weight: 700;
+                font-size: 72px;
+                text-transform: capitalize;
+                span {
+                    color: var(--theme-color-2);
+                    font-weight: 500;
+                  }
+              }
+              ._advertise_banner_btn{
+                margin-top: 13px;
+                .btn-normal {
+                    display: inline-block;
+                  }
+                a {
+                    text-transform: capitalize;
+                    color: var(--theme-color-2);
+                    font-weight: 700;
+                  }
+              }
+          }
+          &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+          }
+          &:hover{
+            ._advertise_img {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+              }
+              &:after {
+                -webkit-animation: collection 1s;
+                animation: collection 1s;
+              }
+          }
+    }
+
+}
+//deal banner
+
+._deal_banner {
+    background-color: var(--theme-color-1);
+    padding: 40px 0;
+    &_wrapper {
+        height: 100%;
+        h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $white;
+            font-weight: 400;
+            line-height: 1;
+            margin-top: -4px;
+            margin-bottom: 5px;
+          }
+          h1 {
+            font-size:30px;
+            font-weight: 700;
+            color: $white;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: 0.5px;
+          }
+          ._deal_banner_btn{
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+          }
+      }
+  }
+  @media (max-width: 1679px) {
+  
+    //advertise banner
+    ._advertise_banner{
+      &_wrapper{
+        ._advertise_img {
+          height: 235px;
+        }
+      }
+    } 
+   
+  }
+  @media (max-width: 1470px) {
+     //advertise banner
+     ._advertise_banner{
+      &_wrapper{
+        ._advertise_img {
+          height: 240px;
+        }
+        ._advertise_banner_content {
+          padding: 30px;
+          h3 {
+            font-size: 30px;
+          }
+          h4 {
+            font-size: 60px;
+          }
+        }
+      }
+    } 
+  }
+  @media (max-width: 1366px) {
+       //advertise banner
+   ._advertise_banner{
+    &_wrapper{
+      ._advertise_img {
+        height: 200px;
+      }
+    
+    }
+  } 
+  }
+  @media (max-width: 1200px) {
+      //discount banner
+  ._discount_banner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+    //advertise banner
+    ._advertise_banner{
+      &_wrapper{
+        ._advertise_img {
+          height: 170px;
+        }
+        ._advertise_banner_content {
+          padding: 25px;
+          h3 {
+            font-size: 20px;
+          }
+          h4 {
+            font-size: 40px;
+          }
+          .btn-normal {
+            padding: 10px 30px;
+          }
+        }
+      }
+    } 
+  
+  }
+  @media (max-width: 991px) {
+      //advertise banner
+      ._advertise_banner{
+        &_wrapper{
+          ._advertise_img {
+            height: 150px;
+          }
+          ._advertise_banner_content {
+            padding: 20px;
+            h3 {
+              font-size: 18px;
+              margin-bottom: 10px;
+            }
+            h4 {
+              font-size: 32px;
+            }
+            ._advertise_banner_btn{
+              margin-top: 10px;
+            }
+            .btn-normal {
+              padding: 8px 25px;
+            }
+          }
+        }
+      } 
+    //deal banner
+    ._deal_banner {
+      padding: 30px 0;
+      &_wrapper {
+        text-align: center;
+        height: auto;
+        h2 {
+          margin-bottom: 15px;
+        }
+        h1 {
+          margin-bottom: 17px;
+        }
+        ._deal_banner_btn {
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+        .btn-white {
+          padding: 12px 40px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+      //discount banner
+  ._discount_banner {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    &_wrapper{
+      h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+      ._discount_banner_round{
+        ._discount_banner_sub_round{
+          line-height: 1.4;
+          padding: 12px 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+   //advertise banner
+   ._advertise_banner{
+    &_wrapper{
+      ._advertise_img {
+        height: 200px;
+      }
+      ._advertise_banner_content {
+        padding: 15px;
+        h3 {
+          font-size: 14px;
+        }
+        h4 {
+          font-size: 18px;
+        margin-bottom: 10px;
+        }
+       
+      }
+    }
+  } 
+  }
+@media (max-width: 575px) {
+  ._discount_banner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+    //advertise banner
+    ._advertise_banner{
+      &_wrapper{
+        ._advertise_img {
+          height: 190px;
+        }
+       
+      }
+    } 
+  //deal banner
+  ._deal_banner {
+    &_wrapper {
+      h2 {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      h1 {
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+    
+    }
+  }
+}
+@media (max-width: 480px) {
+   //discount banner
+   ._discount_banner {
+    &_wrapper{
+     h2 {
+       margin-bottom: 7px;
+     }
+     ._discount_banner_round{
+       ._discount_banner_sub_round{
+         padding: 15px 20px;
+       }
+     }
+    }
+     }
+        //advertise banner
+        ._advertise_banner{
+         &_wrapper{
+           ._advertise_img {
+             height: 150px;
+               background-position: right !important;
+             
+           }
+           ._advertise_banner_content {
+             -webkit-box-pack: left;
+             -ms-flex-pack: left;
+             justify-content: left;
+           padding: 20px;
+            
+            
+           }
+         }
+       } 
+   
+}
+@media (max-width: 360px) {
+  //advertise banner
+  ._advertise_banner{
+    &_wrapper{
+     
+      ._advertise_banner_content {
+        ._advertise_sub_content{
+          background-color: rgba(255, 255, 255, 0.4);
+          padding: 15px;
+        }
+      }
+    }
+  } 
+
+}
+  @media (max-width: 320px) {
+    //deal banner
+    ._deal_banner {
+      &_wrapper {
+        h1 {
+          line-height: 1.4;
+        }
+      }
+    }
+  }

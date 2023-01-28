@@ -1,0 +1,45 @@
+
+
+
+
+  <div class="product-box">
+    <div class="product-imgbox">
+    
+      <div class="product-back">
+        <a routerLink="/products/{{id}}"> <img src="{{image}}" class="img-fluid  " alt="product"> </a>
+      </div>
+      
+    </div>
+    <div class="product-detail product-detail2 ">
+      <ul>
+        <li> <fa-icon [icon]="faStar" class="star-icon"></fa-icon></li>
+        <li> <fa-icon [icon]="faStar" class="star-icon"></fa-icon></li>
+        <li> <fa-icon [icon]="faStar" class="star-icon"></fa-icon></li>
+        <li> <fa-icon [icon]="faStar" class="star-icon"></fa-icon></li>
+        <li> <fa-icon [icon]="faStar" class="star-icon"></fa-icon></li>
+      </ul>
+      <a routerLink="/products/{{id}}" tabindex="0">
+        <h3>{{ title }}</h3>
+      </a>
+      <h5>
+        ${{ price }}
+        <span>$60</span>
+      </h5>
+      <button class="tooltip-top add-cartnoty" 
+      data-tippy-content="Add to cart" tabindex="0"
+      [disabled]="quantity === 0"
+      (click)="
+      addToCart({
+          id: id,
+          price: price,
+          image: image,
+          title: title,
+          maxQuantity: quantity
+        })
+      ">
+        {{ quantity === 0 ? "Out of stock" : "Add to cart" }}
+      </button>
+    </div>
+  
+  </div>
+

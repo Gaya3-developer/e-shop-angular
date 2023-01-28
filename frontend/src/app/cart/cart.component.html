@@ -1,0 +1,155 @@
+<div class="breadcrumb-main">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="breadcrumb-contain">
+          <div>
+            <h2>cart</h2>
+            <ul>
+              <li><a routerLink="/">home</a></li>
+              <li>
+                <fa-icon
+                  [icon]="faAngleDoubleRight"
+                  class="angle-right-icon"
+                ></fa-icon>
+              </li>
+              <li><a routerLink="/cart">cart</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="p-0 b-g-light" *ngIf="cartData.products.length == 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="error-section">
+                    <h2>Cart is empty</h2>
+                    <a routerLink="/products" class="btn btn-normal">continue shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cart-section section-big-py-space b-g-light" *ngIf="cartData.products.length > 0">
+  <div class="custom-container">
+ 
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table cart-table table-responsive-xs">
+          <thead>
+            <tr class="table-head">
+              <th scope="col">image</th>
+              <th scope="col">product name</th>
+              <th scope="col">price</th>
+              <th scope="col">quantity</th>
+              <th scope="col">action</th>
+              <th scope="col">total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let product of cartData.products; index as i"
+              [ngStyle]="{
+                border: i === cartData.products.length - 1 && 'none'
+              }"
+            >
+              <td>
+                <a routerLink="/products/{{ product.id }}"
+                  ><img [src]="product.image" alt="cart" class=" "
+                /></a>
+              </td>
+              <td>
+                <a routerLink="/products/{{ product.id }}">{{
+                  product.title
+                }}</a>
+                <div class="mobile-cart-content">
+                  <div class="col-xs-3">
+                    <div class="qty-box">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          name="quantity"
+                          class="form-control input-number"
+                          value="product.quantity"
+                          [(ngModel)]="product.quantity"
+                          (ngModelChange)="
+                            updateCart(product.id, product.quantity)
+                          "
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <h2 class="td-color">
+                      {{ product.price * product.quantity | currency : "INR" }}
+                    </h2>
+                  </div>
+                  <div class="col-xs-3">
+                    <h2 class="td-color">
+                      <a (click)="removeCartItem(product.id)" class="icon"
+                        ><fa-icon [icon]="faClose" class="close-icon"></fa-icon
+                      ></a>
+                    </h2>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <h2>{{ product.price | currency : "INR" }}</h2>
+              </td>
+              <td>
+                <div class="qty-box">
+                  <div class="input-group">
+                    <input
+                      type="number"
+                      name="quantity"
+                      class="form-control input-number"
+                      value="product.quantity"
+                      [(ngModel)]="product.quantity"
+                      (ngModelChange)="updateCart(product.id, product.quantity)"
+                    />
+                  </div>
+                </div>
+              </td>
+              <td>
+                <a (click)="removeCartItem(product.id)" class="icon"
+                  ><fa-icon [icon]="faClose" class="close-icon"></fa-icon
+                ></a>
+              </td>
+              <td>
+                <h2 class="td-color">
+                  {{ product.price * product.quantity | currency : "INR" }}
+                </h2>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table cart-table table-responsive-md">
+          <tfoot>
+            <tr>
+              <td>total price :</td>
+              <td>
+                <h2>{{ cartData.total | currency : "INR" }}</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>total items :</td>
+              <td>
+                <h2>{{ cartData.products.length }}</h2>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="row cart-buttons">
+      <div class="col-12">
+        <a routerLink="/products" class="btn btn-normal">continue shopping</a>
+        <a routerLink="/checkout" class="btn btn-normal ms-3">check out</a>
+      </div>
+    </div>
+  </div>
+</section>

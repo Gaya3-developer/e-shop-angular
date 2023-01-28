@@ -1,0 +1,61 @@
+<div class="breadcrumb-main ">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="breadcrumb-contain">
+          <div>
+            <h2>product by category</h2>
+            <ul>
+              <li><a routerLink="/products">product</a></li>
+              <li> <fa-icon [icon]="faAngleDoubleRight" class="angle-right-icon"></fa-icon></li>
+              <li><a routerLink="/products/category/{{id}}" *ngFor="let cat of categoryList">{{cat.title}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="product pb-5">
+  <div class="custom-container addtocart_count">
+    <div class="row">
+      <div class="col-12 pr-0">
+
+        <div class="collection-product-wrapper">
+         
+          <div class="product-wrapper-grid product">
+            <div class="row">
+              <div class="col-xl-3 col-md-4 col-6  col-grid-box "  *ngFor="let n of productList"> 
+                <app-product-card
+               
+                [id]="n.id"
+                [title]="n.title"
+                [image]="n.image"
+                [price]="n.price"
+                [short_desc]="n.short_desc"
+                [category]="n.category"
+                [quantity]="n.quantity"
+        
+              >
+  
+              </app-product-card>
+            </div>
+           
+          
+            
+        
+           
+            
+            </div>
+          </div>
+        
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>

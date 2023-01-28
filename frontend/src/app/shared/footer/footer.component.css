@@ -1,0 +1,111 @@
+._footer {
+  background: #1c3481;
+  color: #b9babc;
+  border-top: 4px solid #33b54c;
+}
+._footer_section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+._footer_section ._footer_wrapper {
+  margin: 30px 0;
+}
+._footer_section ._footer_wrapper ._brand_logo {
+  margin-bottom: 20px;
+}
+._footer_section ._footer_wrapper ._brand_logo h1 {
+  background-image: linear-gradient(50deg, white, #00baf2, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -25px;
+}
+._footer_section ._footer_wrapper ._brand_logo span {
+  -webkit-text-fill-color: #33b54c;
+}
+._footer_section ._footer_wrapper h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 0 30px;
+}
+._footer_section ._footer_wrapper p {
+  margin-bottom: 10px;
+}
+._footer_section ._footer_wrapper ul li {
+  display: block;
+}
+._footer_section ._footer_wrapper ul li + li {
+  margin-top: 15px;
+}
+._footer_section ._footer_wrapper ul li a {
+  color: #b9babc;
+}
+._footer_section ._footer_wrapper ul li a:hover {
+  color: #00baf2;
+}
+._footer_section ._footer_wrapper ul li .c-icon {
+  margin-right: 15px;
+  color: #00baf2;
+  width: 14px;
+  text-align: center;
+}
+._footer_section ._footer_wrapper ._social_icons {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+._footer_section ._footer_wrapper ._social_icons li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+._footer_section ._footer_wrapper ._social_icons li a .s-icon {
+  color: #777;
+  font-size: 12px;
+  margin-right: 0;
+}
+._footer_section ._footer_wrapper ._social_icons li + li {
+  margin-top: 0;
+}
+._footer_section ._footer_wrapper ._social_icons li:nth-child(n+2) {
+  margin-left: 10px;
+}
+._footer_section ._footer_wrapper ._social_icons li:hover {
+  background-color: #00baf2;
+  transition: all 0.3s ease;
+}
+._footer_section ._footer_wrapper ._social_icons li:hover .s-icon {
+  color: white !important;
+}
+._footer ._copyright_footer {
+  background: #00baf2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+._footer ._copyright_footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+._footer ._copyright_footer_wrapper ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+._footer ._copyright_footer_wrapper span {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  ._footer ._copyright_footer_wrapper {
+    display: block;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+}/*# sourceMappingURL=footer.component.css.map */
